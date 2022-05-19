@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="experiment.css">
+  <script src="experiment.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      font-size: 1.5em;
+    }
+    .center {
+  margin-left: auto;
+  margin-right: auto;
+}
+    td 
+    {
+     line-height: 2;
+    }
+  </style>
+</head>
+<script>
+  function myfun() {
+    let format = /[.]/;
+    if(document.getElementById('r1').checked) {
+      function reverse() {
+        
+      let user_value = document.getElementById('input').value;
+      let number = user_value;
+      let isnum = Number(user_value);
+
+      if (format.test(user_value)) {
+        document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+      }
+
+      else if (user_value=="") {
+        document.getElementById('showInfo').innerHTML = "null: Please enter value";
+      }
+      else if( isNaN(isnum) ) {
+        document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+      }
+      else {
+        let reverse = user_value;
+        let arr1=[], arr2=[], temp=[];
+        for (var i = 0; i < reverse.length; i++){
+          arr1[i] = reverse[i];
+        }
+        temp = arr1.slice();
+        var length = temp.length; 
+        for (var i=0; i<length;i++){
+            arr2[i] = temp.pop();
+        }
+        temp = arr2.join('');
+        document.getElementById('showInfo').innerHTML = (reverse+" on inversion becomes:"+temp);
+      }
+    }
+      // calling
+      reverse();
+  }
+    
+    else if (document.getElementById('r2').checked) {
+      function Reversefun(user_value) {
+        
+        let number = user_value;
+        let isnum = Number(user_value);
+
+        if (format.test(user_value)) {
+        document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+      }
+        else if (user_value=="") {
+          document.getElementById('showInfo').innerHTML = "null: Please enter value";
+        }
+        else if( isNaN(isnum) ) {
+          document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+        }
+        else {
+        let reverse = user_value;
+        let arr1=[], arr2=[], temp=[];
+        for (var i = 0; i < reverse.length; i++){
+          arr1[i] = reverse[i];
+        }
+        temp = arr1.slice();
+        var length = temp.length; 
+        for (var i=0; i<length;i++){
+            arr2[i] = temp.pop();
+        }
+        temp = arr2.join('');
+        document.getElementById('showInfo').innerHTML = (reverse+" on inversion becomes:"+temp);
+        }
+      }
+        // calling
+        let u_value = document.getElementById('input').value;
+        Reversefun(u_value);
+    }
+
+    else if( document.getElementById('r3').checked ) {
+      function Reversefun(user_value) {
+
+        let number = user_value;
+        let isnum = Number(user_value);
+
+        if (format.test(user_value)) {
+          return "Decimal not Allowed";
+      }
+
+        else if (user_value=="") {
+          return "null: Please enter value";
+        }
+        else if( isNaN(isnum) ) {
+          return 'NaN:Only number are allowed';
+        }
+        else {
+          let reverse = user_value;
+        let arr1=[], arr2=[], temp=[];
+        for (var i = 0; i < reverse.length; i++){
+          arr1[i] = reverse[i];
+        }
+        temp = arr1.slice();
+        var length = temp.length; 
+        for (var i=0; i<length;i++){
+            arr2[i] = temp.pop();
+        }
+        temp = arr2.join('');
+        return (reverse+" on inversion becomes:"+temp);   
+      }
+        }
+        // calling
+        let u_value = document.getElementById('input').value;
+        let pinfo =  Reversefun(u_value);
+        document.getElementById('showInfo').innerHTML = pinfo 
+    }
+
+    else if( document.getElementById('r4').checked ) {
+      function Reversefun() {
+      
+      user_value = document.getElementById('input').value;
+      let number = user_value;
+      let isnum = Number(user_value);
+
+      if (format.test(user_value)) {
+        return "Decimal not Allowed";
+      }
+      else if (user_value=="") {
+        return "null: Please enter value";
+      }
+      else if( isNaN(isnum) ) {
+        return 'NaN:Only number are allowed';
+      }
+      else {
+        let reverse = user_value;
+        let arr1=[], arr2=[], temp=[];
+        for (var i = 0; i < reverse.length; i++){
+          arr1[i] = reverse[i];
+        }
+        temp = arr1.slice();
+        var length = temp.length; 
+        for (var i=0; i<length;i++){
+            arr2[i] = temp.pop();
+        }
+        temp = arr2.join('');
+        return (reverse+" on inversion becomes:"+temp); 
+      }
+    }
+      // calling
+      let pinfo =  Reversefun();
+      document.getElementById('showInfo').innerHTML = pinfo 
+    }
+    
+    else if ( document.getElementById('r5').checked ) {
+
+      let forReverse =  function() {
+
+          user_value = document.getElementById('input').value;
+          let number = user_value;
+          let isnum = Number(user_value);
+
+          if (format.test(user_value)) {
+            document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+          }
+          else if (user_value=="") {
+            document.getElementById('showInfo').innerHTML = "null: Please enter value";
+          }
+          else if( isNaN(isnum) ) {
+            document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+          }
+          else {
+            let reverse = user_value;
+            let arr1=[], arr2=[], temp=[];
+            for (var i = 0; i < reverse.length; i++){
+              arr1[i] = reverse[i];
+            }
+            temp = arr1.slice();
+            var length = temp.length; 
+            for (var i=0; i<length;i++){
+                arr2[i] = temp.pop();
+            }
+            temp = arr2.join('');
+        document.getElementById('showInfo').innerHTML = (reverse+" on inversion becomes:"+temp);
+          }
+      }
+        // calling
+        forReverse();
+    }
+    else if ( document.getElementById('r6').checked ) {
+      function Reversefun() {
+        
+        let user_value = document.getElementById('input').value;
+        let number = user_value;
+        let isnum = Number(user_value);
+  
+        if (format.test(user_value)) {
+          document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+        }
+        else if (user_value=="") {
+          document.getElementById('showInfo').innerHTML = "null: Please enter value";
+        }
+        else if( isNaN(isnum) ) {
+          document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+        }
+        else {
+          function ask(question, yes, info) {
+          let showV = yes(question)
+          info(showV);
+        }
+
+        function showInfo(showV) {
+            document.getElementById('showInfo').innerHTML = showV;
+        }
+
+        function showOk(number) {    
+        let arr1=[], arr2=[], temp=[];
+          for (var i = 0; i < number.length; i++) {
+                  arr1[i] = number[i];
+        }
+            temp = arr1.slice();
+            var length = temp.length; 
+            for (var i=0; i<length;i++) {
+              arr2[i] = temp.pop();
+        }
+        temp = arr2.join('');
+        return (number+" on inversion becomes:"+temp);    
+        }
+
+        // usage: functions showOk, showCancel are passed as arguments to ask
+        let value = user_value;
+        ask(value, showOk, showInfo);
+
+      }
+        }
+        // calling
+        Reversefun(); 
+    }
+    else if ( document.getElementById('r7').checked ) {
+
+      let forarrow = () => {
+        
+        let user_value = document.getElementById('input').value;
+        let number = user_value;
+        let isnum = Number(user_value);
+
+        if (format.test(user_value)) {
+          document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+        }
+        else if (user_value=="") {
+          document.getElementById('showInfo').innerHTML = "null: Please enter value";
+        }
+        else if( isNaN(isnum) ) {
+          document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+        }
+        else {
+          let reverse = user_value;
+          let arr1=[], arr2=[], temp=[];
+          for (var i = 0; i < reverse.length; i++){
+            arr1[i] = reverse[i];
+          }
+          temp = arr1.slice();
+          var length = temp.length; 
+          for (var i=0; i<length;i++){
+              arr2[i] = temp.pop();
+          }
+          temp = arr2.join('');
+        document.getElementById('showInfo').innerHTML = (reverse+" on inversion becomes:"+temp);
+      }
+        };
+        // calling
+        forarrow();
+    }
+    else if (document.getElementById('r8').checked) {
+        
+        let user_value = document.getElementById('input').value;
+        let number = user_value;
+        let isnum = Number(user_value);
+
+        if (format.test(user_value)) {
+          document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+        }
+        else if (user_value=="") {
+          document.getElementById('showInfo').innerHTML = "null: Please enter value";
+        }
+        else if( isNaN(isnum) ) {
+          document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+        }
+        else {
+          let p = new Promise( (resolve, reject) => {
+          let reverse = user_value;
+          let arr1=[], arr2=[], temp=[];
+          for (var i = 0; i < reverse.length; i++){
+            arr1[i] = reverse[i];
+          }
+          temp = arr1.slice();
+          var length = temp.length; 
+          for (var i=0; i<length;i++){
+              arr2[i] = temp.pop();
+          }
+          temp = arr2.join('');
+          if (temp) {
+              resolve(reverse+" on inversion becomes:"+temp);
+            }
+          else {
+              reject('Some Error');
+            }
+          })
+
+          p.then((message) => {
+            document.getElementById('showInfo').innerHTML = message;
+          }).catch((message) => {
+            document.getElementById('showInfo').innerHTML = message;
+          })
+      }
+ }
+
+}
+</script>
+
+
+
+
+<body style="margin-top: 5%;">
+  <table style="border-collapse: collapse; border: 1px solid black; background-color: aqua;" class="center">
+    <tr>
+      <td style="float: left;" >  <input type="text"  id="input" size="35" style="height: 2em; font-size: 1em;"> </td>
+      <td style="float: right;"> <input type="submit" name="" id="submit" onclick="myfun()" style="width: 10em;height: 2.2em;font-size: 1em;"> </td>
+    </tr>
+    <tr style="background-color: aliceblue;">
+      <td style="float: left;" id="showInfo">Reverse of a Number</td>
+    </tr>
+    <tr>
+      <td style="float: left;">1.No argument No return value.</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r1"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">2.With argument no return value.</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r2"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">3.With argument and with a return.</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r3"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">4.With return no argument.</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r4"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">5.Using function expression</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r5"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">6.Call back function</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r6"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">7.Arrow function</td>
+      <td style="float: right;"> <input type="radio" name="radio" id="r7"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">8.Promise</td>
+      <td style="float: right;"> <input type="radio" name="radio" id="r8"> </td>
+    </tr>
+
+  </table>
+</body>
+</html>

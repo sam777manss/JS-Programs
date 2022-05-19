@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="experiment.css">
+  <script src="experiment.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      font-size: 1.5em;
+    }
+    .center {
+  margin-left: auto;
+  margin-right: auto;
+}
+    td 
+    {
+     line-height: 2;
+    }
+  </style>
+</head>
+<script>
+  function myfun() {
+    let format = /[.]/;
+    if(document.getElementById('r1').checked) {
+      function isPrime() {
+        
+      let user_value = document.getElementById('input').value;
+      let number = user_value;
+      let isnum = Number(user_value);
+
+      if (format.test(user_value)) {
+        document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+      }
+
+      else if (user_value=="") {
+        document.getElementById('showInfo').innerHTML = "null: Please enter value";
+      }
+      else if( isNaN(isnum) ) {
+        document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+      }
+      else {
+      var count=0;
+      var iterate = Number(user_value);
+      for(var j = 1; j <= iterate; j++) {
+        if(iterate%j==0){
+          count += 1;
+        }
+      }
+      if (count==2) {
+        document.getElementById('showInfo').innerHTML = "is a prime";
+      }
+      else{
+        document.getElementById('showInfo').innerHTML = " not a prime, ";
+      }count = 0;
+    }
+      }
+      // calling
+      isPrime();
+      }
+    
+    else if (document.getElementById('r2').checked) {
+      function isPrime(user_value) {
+        
+        let number = user_value;
+        let isnum = Number(user_value);
+
+        if (format.test(user_value)) {
+        document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+      }
+        else if (user_value=="") {
+          document.getElementById('showInfo').innerHTML = "null: Please enter value";
+        }
+        else if( isNaN(isnum) ) {
+          document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+        }
+        else {
+        var count=0;
+        var iterate = Number(user_value);
+        for(var j = 1; j <= iterate; j++) {
+          if(iterate%j==0){
+            count += 1;
+          }
+        }
+        if (count==2) {
+          document.getElementById('showInfo').innerHTML = "is a prime";
+        }
+        else{
+          document.getElementById('showInfo').innerHTML = " not a prime, ";
+        }count = 0;
+      }
+        }
+        // calling
+        let u_value = document.getElementById('input').value;
+        isPrime(u_value);
+    }
+
+    else if( document.getElementById('r3').checked ) {
+      function isPrime(user_value) {
+
+        let number = user_value;
+        let isnum = Number(user_value);
+
+        if (format.test(user_value)) {
+          return "Decimal not Allowed";
+      }
+
+        else if (user_value=="") {
+          return "null: Please enter value";
+        }
+        else if( isNaN(isnum) ) {
+          return 'NaN:Only number are allowed';
+        }
+        else {
+        var count=0;
+        var iterate = Number(user_value);
+        for(var j = 1; j <= iterate; j++) {
+          if(iterate%j==0){
+            count += 1;
+          }
+        }
+        if (count==2) {
+          return ("is a prime");
+        }
+        else{
+          return (" not a prime, ");
+        }count = 0;
+      }
+        }
+        // calling
+        let u_value = document.getElementById('input').value;
+        let pinfo =  isPrime(u_value);
+        document.getElementById('showInfo').innerHTML = pinfo 
+    }
+
+    else if( document.getElementById('r4').checked ) {
+      function isPrime() {
+      
+      user_value = document.getElementById('input').value;
+      let number = user_value;
+      let isnum = Number(user_value);
+
+      if (format.test(user_value)) {
+        return "Decimal not Allowed";
+      }
+      else if (user_value=="") {
+        return "null: Please enter value";
+      }
+      else if( isNaN(isnum) ) {
+        return 'NaN:Only number are allowed';
+      }
+      else {
+      var count=0;
+      var iterate = Number(user_value);
+      for(var j = 1; j <= iterate; j++) {
+        if(iterate%j==0){
+          count += 1;
+        }
+      }
+      if (count==2) {
+        return ("is a prime");
+      }
+      else{
+        return (" not a prime, ");
+      }count = 0;
+      }
+      }
+      // calling
+      let pinfo =  isPrime();
+      document.getElementById('showInfo').innerHTML = pinfo 
+      }
+    
+    else if ( document.getElementById('r5').checked ) {
+
+      let forprime =  function() {
+
+          user_value = document.getElementById('input').value;
+          let number = user_value;
+          let isnum = Number(user_value);
+
+          if (format.test(user_value)) {
+            document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+          }
+          else if (user_value=="") {
+            document.getElementById('showInfo').innerHTML = "null: Please enter value";
+          }
+          else if( isNaN(isnum) ) {
+            document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+          }
+          else {
+          var count=0;
+          var iterate = Number(user_value);
+          for(var j = 1; j <= iterate; j++) {
+            if(iterate%j==0){
+              count += 1;
+            }
+          }
+          if (count==2) {
+            document.getElementById('showInfo').innerHTML= "is a prime";
+          }
+          else{
+            document.getElementById('showInfo').innerHTML= " not a prime, ";
+          }count = 0;
+        }
+      }
+        // calling
+        forprime();
+    }
+    else if ( document.getElementById('r6').checked ) {
+      function isPrime() {
+        
+        let user_value = document.getElementById('input').value;
+        let number = user_value;
+        let isnum = Number(user_value);
+  
+        if (format.test(user_value)) {
+          document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+        }
+        else if (user_value=="") {
+          document.getElementById('showInfo').innerHTML = "null: Please enter value";
+        }
+        else if( isNaN(isnum) ) {
+          document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+        }
+        else {
+          function ask(question, yes, no) {
+              if (funPrime(question)) yes()
+              else no();
+            }
+            function isprime() {
+              document.getElementById('showInfo').innerHTML = " is a prime, ";
+            }
+            function isnotprime() {
+              document.getElementById('showInfo').innerHTML= " not a prime, ";
+            }
+
+                arr = document.getElementById('input').value;
+                ask(arr, isprime, isnotprime);
+
+
+            ////////
+            function funPrime(arg) {
+              let count = 0;
+                let iterate = Number(arg);
+                // alert(typeof iterate);
+                for(var j = 1; j <= iterate; j++) {
+                  if(iterate%j==0){
+                    count += 1;
+                  }
+                }
+                if (count==2) {
+                  return true;
+                }
+                else{
+                  return false;
+                }
+            }
+
+      }
+        }
+        // calling
+        isPrime(); 
+    }
+    else if ( document.getElementById('r7').checked ) {
+
+      let forarrow = () => {
+        
+        let user_value = document.getElementById('input').value;
+        let number = user_value;
+        let isnum = Number(user_value);
+
+        if (format.test(user_value)) {
+          document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+        }
+        else if (user_value=="") {
+          document.getElementById('showInfo').innerHTML = "null: Please enter value";
+        }
+        else if( isNaN(isnum) ) {
+          document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+        }
+        else {
+        var count=0;
+        var iterate = Number(user_value);
+        for(var j = 1; j <= iterate; j++) {
+          if(iterate%j==0){
+            count += 1;
+          }
+        }
+        if (count==2) {
+          document.getElementById('showInfo').innerHTML = "is a prime";
+        }
+        else{
+          document.getElementById('showInfo').innerHTML = " not a prime, ";
+        }count = 0;
+      }
+        };
+        // calling
+        forarrow();
+    }
+    else if (document.getElementById('r8').checked) {
+        
+        let user_value = document.getElementById('input').value;
+        let number = user_value;
+        let isnum = Number(user_value);
+
+        if (format.test(user_value)) {
+          document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+        }
+        else if (user_value=="") {
+          document.getElementById('showInfo').innerHTML = "null: Please enter value";
+        }
+        else if( isNaN(isnum) ) {
+          document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+        }
+        else {
+
+          let p = new Promise( (resolve, reject) => {
+          let v = document.getElementById('input').value;
+          num = Number(v);
+          let count = 0;
+          for (var i = 1; i <= num;  i++) {
+              if (num % i == 0) {
+                  count += 1;
+            }
+          }
+          if (count == 2) {
+              resolve("Prime");
+            }
+          else {
+              reject('Not prime');
+            }
+          })
+
+          p.then((message) => {
+            document.getElementById('showInfo').innerHTML = message;
+          }).catch((message) => {
+            document.getElementById('showInfo').innerHTML = message;
+          })
+      }
+ }
+
+}
+</script>
+
+
+
+
+<body style="margin-top: 5%;">
+  <table style="border-collapse: collapse; border: 1px solid black; background-color: aqua;" class="center">
+    <tr>
+      <td style="float: left;" >  <input type="text"  id="input" size="35" style="height: 2em; font-size: 1em;"> </td>
+      <td style="float: right;"> <input type="submit" name="" id="submit" onclick="myfun()" style="width: 10em;height: 2.2em;font-size: 1em;"> </td>
+    </tr>
+    <tr style="background-color: aliceblue;">
+      <td style="float: left;" id="showInfo">Enter number to check prime</td>
+    </tr>
+    <tr>
+      <td style="float: left;">1.No argument No return value.</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r1"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">2.With argument no return value.</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r2"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">3.With argument and with a return.</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r3"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">4.With return no argument.</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r4"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">5.Using function expression</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r5"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">6.Call back function</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r6"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">7.Arrow function</td>
+      <td style="float: right;"> <input type="radio" name="radio" id="r7"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">8.Promise</td>
+      <td style="float: right;"> <input type="radio" name="radio" id="r8"> </td>
+    </tr>
+
+  </table>
+</body>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="experiment.css">
+  <script src="experiment.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      font-size: 1.5em;
+    }
+    .center {
+  margin-left: auto;
+  margin-right: auto;
+}
+    td 
+    {
+     line-height: 2;
+    }
+  </style>
+</head>
+<script>
+  function myfun() {
+    let format = /[.]/;
+    if(document.getElementById('r1').checked) {
+      function isArmstrong() {
+        
+      let user_value = document.getElementById('input').value;
+      let number = user_value;
+      let isnum = Number(user_value);
+
+      if (format.test(user_value)) {
+        document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+      }
+
+      else if (user_value=="") {
+        document.getElementById('showInfo').innerHTML = "null: Please enter value";
+      }
+      else if( isNaN(isnum) ) {
+        document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+      }
+      else {
+        let arr = []
+        arr = user_value;
+        // document.write(arr);
+            numbers = arr;
+            let arr1 = [];
+            for (var i = 0; i < numbers.length; i++) {
+                arr1[i] = Number(numbers[i]);
+            }
+            // coversion string to number
+            numbers = Number(numbers);
+            let sum_of_digits = 0;
+            let len_of_nums = arr1.length;
+
+            for (var i = 0; i < arr1.length; i++) {
+                sum_of_digits = sum_of_digits + arr1[i] ** len_of_nums;
+                
+            }
+
+          if (sum_of_digits === numbers) {
+              document.getElementById('showInfo').innerHTML = " Armstrong";
+          }
+          else if (sum_of_digits !== numbers) {
+            document.getElementById('showInfo').innerHTML = " Not Armstrong";
+          }
+
+      }
+      }
+      // calling
+      isArmstrong();
+      }
+    
+    else if (document.getElementById('r2').checked) {
+      function isArmstrong(user_value) {
+        
+        let number = user_value;
+        let isnum = Number(user_value);
+
+        if (format.test(user_value)) {
+        document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+      }
+        else if (user_value=="") {
+          document.getElementById('showInfo').innerHTML = "null: Please enter value";
+        }
+        else if( isNaN(isnum) ) {
+          document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+        }
+        else {
+          let arr = []
+        arr = user_value;
+        // document.write(arr);
+            numbers = arr;
+            let arr1 = [];
+            for (var i = 0; i < numbers.length; i++) {
+                arr1[i] = Number(numbers[i]);
+            }
+            // coversion string to number
+            numbers = Number(numbers);
+            let sum_of_digits = 0;
+            let len_of_nums = arr1.length;
+
+            for (var i = 0; i < arr1.length; i++) {
+                sum_of_digits = sum_of_digits + arr1[i] ** len_of_nums;
+                
+            }
+
+          if (sum_of_digits === numbers) {
+              document.getElementById('showInfo').innerHTML = " Armstrong";
+          }
+          else if (sum_of_digits !== numbers) {
+            document.getElementById('showInfo').innerHTML = " Not Armstrong";
+          }
+
+      }
+        }
+        // calling
+        let u_value = document.getElementById('input').value;
+        isArmstrong(u_value);
+    }
+
+    else if( document.getElementById('r3').checked ) {
+      function isArmstrong(user_value) {
+
+        let number = user_value;
+        let isnum = Number(user_value);
+
+        if (format.test(user_value)) {
+          return "Decimal not Allowed";
+      }
+
+        else if (user_value=="") {
+          return "null: Please enter value";
+        }
+        else if( isNaN(isnum) ) {
+          return 'NaN:Only number are allowed';
+        }
+        else {
+          let arr = []
+        arr = user_value;
+        // document.write(arr);
+            numbers = arr;
+            let arr1 = [];
+            for (var i = 0; i < numbers.length; i++) {
+                arr1[i] = Number(numbers[i]);
+            }
+            // coversion string to number
+            numbers = Number(numbers);
+            let sum_of_digits = 0;
+            let len_of_nums = arr1.length;
+
+            for (var i = 0; i < arr1.length; i++) {
+                sum_of_digits = sum_of_digits + arr1[i] ** len_of_nums;
+                
+            }
+
+          if (sum_of_digits === numbers) {
+              return " Armstrong";
+          }
+          else if (sum_of_digits !== numbers) {
+            return " Not Armstrong";
+          }
+      }
+        }
+        // calling
+        let u_value = document.getElementById('input').value;
+        let pinfo =  isArmstrong(u_value);
+        document.getElementById('showInfo').innerHTML = pinfo 
+    }
+
+    else if( document.getElementById('r4').checked ) {
+      function isArmstrong() {
+      
+      user_value = document.getElementById('input').value;
+      let number = user_value;
+      let isnum = Number(user_value);
+
+      if (format.test(user_value)) {
+        return "Decimal not Allowed";
+      }
+      else if (user_value=="") {
+        return "null: Please enter value";
+      }
+      else if( isNaN(isnum) ) {
+        return 'NaN:Only number are allowed';
+      }
+      else {
+        let arr = []
+        arr = user_value;
+        // document.write(arr);
+            numbers = arr;
+            let arr1 = [];
+            for (var i = 0; i < numbers.length; i++) {
+                arr1[i] = Number(numbers[i]);
+            }
+            // coversion string to number
+            numbers = Number(numbers);
+            let sum_of_digits = 0;
+            let len_of_nums = arr1.length;
+
+            for (var i = 0; i < arr1.length; i++) {
+                sum_of_digits = sum_of_digits + arr1[i] ** len_of_nums;
+                
+            }
+
+          if (sum_of_digits === numbers) {
+              return " Armstrong";
+          }
+          else if (sum_of_digits !== numbers) {
+             return " Not Armstrong";
+          }
+
+      }
+      }
+      // calling
+      let pinfo =  isArmstrong();
+      document.getElementById('showInfo').innerHTML = pinfo 
+      }
+    
+    else if ( document.getElementById('r5').checked ) {
+
+      let forArmstrong =  function() {
+
+          user_value = document.getElementById('input').value;
+          let number = user_value;
+          let isnum = Number(user_value);
+
+          if (format.test(user_value)) {
+            document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+          }
+          else if (user_value=="") {
+            document.getElementById('showInfo').innerHTML = "null: Please enter value";
+          }
+          else if( isNaN(isnum) ) {
+            document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+          }
+          else {
+            let arr = []
+        arr = user_value;
+        // document.write(arr);
+            numbers = arr;
+            let arr1 = [];
+            for (var i = 0; i < numbers.length; i++) {
+                arr1[i] = Number(numbers[i]);
+            }
+            // coversion string to number
+            numbers = Number(numbers);
+            let sum_of_digits = 0;
+            let len_of_nums = arr1.length;
+
+            for (var i = 0; i < arr1.length; i++) {
+                sum_of_digits = sum_of_digits + arr1[i] ** len_of_nums;
+                
+            }
+
+          if (sum_of_digits === numbers) {
+              document.getElementById('showInfo').innerHTML = " Armstrong";
+          }
+          else if (sum_of_digits !== numbers) {
+            document.getElementById('showInfo').innerHTML = " Not Armstrong";
+          }
+    
+        }
+      }
+        // calling
+        forArmstrong();
+    }
+    else if ( document.getElementById('r6').checked ) {
+      function isArmstrong() {
+        
+        let user_value = document.getElementById('input').value;
+        let number = user_value;
+        let isnum = Number(user_value);
+  
+        if (format.test(user_value)) {
+          document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+        }
+        else if (user_value=="") {
+          document.getElementById('showInfo').innerHTML = "null: Please enter value";
+        }
+        else if( isNaN(isnum) ) {
+          document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+        }
+        else {
+          function ask(question, yes, no) {
+            if (confirm(question)) yes()
+            else no();
+          }
+          
+          function showOk(question) {
+            document.getElementById('showInfo').innerHTML = "armstrong";
+          }
+          
+          function showCancel() {
+            document.getElementById('showInfo').innerHTML = "not armstrong";
+          }
+
+      let arr = []
+      arr = user_value;
+      ask(arr, showOk, showCancel);
+
+      function confirm(arr) {
+            // document.write(arr);
+              numbers = arr;
+              let arr1 = [];
+              for (var i = 0; i < numbers.length; i++) {
+                  arr1[i] = Number(numbers[i]);
+              }
+              // coversion string to number
+              numbers = Number(numbers);
+              let sum_of_digits = 0;
+              let len_of_nums = arr1.length;
+
+              for (var i = 0; i < arr1.length; i++) {
+                  sum_of_digits = sum_of_digits + arr1[i] ** len_of_nums;
+              }
+              if (sum_of_digits === numbers) {
+                  return true;
+              }
+              else if (sum_of_digits !== numbers) {
+                  return false;
+              }
+      }
+
+      }
+        }
+        // calling
+        isArmstrong(); 
+    }
+    else if ( document.getElementById('r7').checked ) {
+
+      let forarrow = () => {
+        
+        let user_value = document.getElementById('input').value;
+        let number = user_value;
+        let isnum = Number(user_value);
+
+        if (format.test(user_value)) {
+          document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+        }
+        else if (user_value=="") {
+          document.getElementById('showInfo').innerHTML = "null: Please enter value";
+        }
+        else if( isNaN(isnum) ) {
+          document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+        }
+        else {
+          let arr = []
+        arr = user_value;
+        // document.write(arr);
+            numbers = arr;
+            let arr1 = [];
+            for (var i = 0; i < numbers.length; i++) {
+                arr1[i] = Number(numbers[i]);
+            }
+            // coversion string to number
+            numbers = Number(numbers);
+            let sum_of_digits = 0;
+            let len_of_nums = arr1.length;
+
+            for (var i = 0; i < arr1.length; i++) {
+                sum_of_digits = sum_of_digits + arr1[i] ** len_of_nums;
+                
+            }
+
+          if (sum_of_digits === numbers) {
+              document.getElementById('showInfo').innerHTML = " Armstrong";
+          }
+          else if (sum_of_digits !== numbers) {
+            document.getElementById('showInfo').innerHTML = " Not Armstrong";
+          }   
+      }
+        };
+        // calling
+        forarrow();
+    }
+    else if (document.getElementById('r8').checked) {
+        
+        let user_value = document.getElementById('input').value;
+        let number = user_value;
+        let isnum = Number(user_value);
+
+        if (format.test(user_value)) {
+          document.getElementById('showInfo').innerHTML = "Decimal not Allowed";
+        }
+        else if (user_value=="") {
+          document.getElementById('showInfo').innerHTML = "null: Please enter value";
+        }
+        else if( isNaN(isnum) ) {
+          document.getElementById('showInfo').innerHTML = 'NaN:Only number are allowed';
+        }
+        else {
+        
+          let p = new Promise( (resolve, reject) => {
+
+          let arr = []
+          arr = user_value;
+          // document.write(arr);
+              numbers = arr;
+              let arr1 = [];
+              for (var i = 0; i < numbers.length; i++) {
+                  arr1[i] = Number(numbers[i]);
+              }
+              // coversion string to number
+              numbers = Number(numbers);
+              let sum_of_digits = 0;
+              let len_of_nums = arr1.length;
+
+              for (var i = 0; i < arr1.length; i++) {
+                  sum_of_digits = sum_of_digits + arr1[i] ** len_of_nums;
+                  
+              }
+
+          if (sum_of_digits === numbers) {
+            resolve("Armstrong");
+          }
+          else if (sum_of_digits !== numbers) {
+            reject('Not Armstrong');
+          }
+        })
+
+          p.then((message) => {
+          document.getElementById('showInfo').innerHTML = message;
+          }).catch((message) => {
+          document.getElementById('showInfo').innerHTML = message;
+          })
+      }
+ }
+
+}
+</script>
+
+
+
+
+<body style="margin-top: 5%;">
+  <table style="border-collapse: collapse; border: 1px solid black; background-color: aqua;" class="center">
+    <tr>
+      <td style="float: left;" >  <input type="text"  id="input" size="35" style="height: 2em; font-size: 1em;"> </td>
+      <td style="float: right;"> <input type="submit" name="" id="submit" onclick="myfun()" style="width: 10em;height: 2.2em;font-size: 1em;"> </td>
+    </tr>
+    <tr style="background-color: aliceblue;">
+      <td style="float: left;" id="showInfo">Armstrong number checking</td>
+    </tr>
+    <tr>
+      <td style="float: left;">1.No argument no return value.</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r1"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">2.With argument no return value.</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r2"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">3.With argument and with a return.</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r3"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">4.With return no argument.</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r4"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">5.Using function expression</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r5"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">6.Call back function</td>
+      <td  style="float: right;"> <input type="radio" name="radio" id="r6"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">7.Arrow function</td>
+      <td style="float: right;"> <input type="radio" name="radio" id="r7"> </td>
+    </tr>
+    <tr>
+      <td style="float: left;">8.Promise</td>
+      <td style="float: right;"> <input type="radio" name="radio" id="r8"> </td>
+    </tr>
+
+  </table>
+</body>
+</html>
